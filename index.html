@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MU Student Spending Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- =========================================
+       LANDING PAGE (INTRO)
+  ========================================= -->
+  <div id="intro" class="container">
+    <h1>HOW MUCH OF AN AVERAGE MU STUDENT ARE YOU?</h1>
+    <hr class="header-line">
+    <p class="intro-p1">A survey was conducted among <strong>17 MU students</strong> to understand their everyday spending habits.</p>
+    <p class="intro-p2">Now let's see how closely you match the responses in our sample.</p>
+    
+    <button class="start-btn" onclick="startQuiz()">TAKE THE QUIZ &rarr;</button>
+    <p class="disclaimer">*The findings represent this sample of 17 respondents, not all MU students.</p>
+  </div>
+
+
+  <!-- =========================================
+       QUIZ PAGE
+  ========================================= -->
+  <div id="quiz" class="container hidden">
+    <div class="quiz-header">
+      <span class="sub-label">CHOOSE THE ANSWER THAT FEELS MOST LIKE YOU.</span>
+      <div class="progress-bar-container">
+        <div id="progress-bar"></div>
+      </div>
+    </div>
+
+    <h2 id="question-text">Question goes here...</h2>
+    <div id="answer-options" class="options-grid"></div>
+  </div>
+
+
+  <!-- =========================================
+       RESULTS PAGE
+  ========================================= -->
+  <div id="results" class="container hidden">
+    <h1 class="results-main-title">YOUR RESULT</h1>
+
+    <div class="result-section">
+      <h3 class="section-label">YOUR SPENDING TYPE</h3>
+      <div class="archetype-card">
+        <h2 id="result-archetype">THE BUDGETER</h2>
+        <p id="result-quote">“Failing to plan is planning to fail.”</p>
+        <p id="result-source"></p>
+      </div>
+    </div>
+
+    <div class="match-section">
+      <h3 class="section-label">MU MATCH</h3>
+      <div id="match-percentage" class="match-big">0%</div>
+      <p id="match-description">0 out of 4 survey questions matched the most common response.</p>
+    </div>
+
+    <hr class="section-divider">
+
+    <div class="comparison-section">
+      <h2 class="section-heading">HOW YOU COMPARE</h2>
+      <div id="comparison-table-container"></div>
+    </div>
+
+    <button class="nav-btn" onclick="showData()">VIEW COLLECTED DATA &rarr;</button>
+  </div>
+
+
+  <!-- =========================================
+       DATA COLLECTED PAGE
+  ========================================= -->
+  <div id="data" class="container hidden">
+    <h1 class="data-title">DATA COLLECTED</h1>
+    <p class="data-intro">Below is the data collected from 17 Mahindra University students regarding their spending habits.</p>
+
+    <hr class="section-divider">
+
+    <!-- Question 01 Card -->
+    <div class="data-card">
+      <div class="question-number">01</div>
+      <h3 class="data-question">What do you spend most of your money on?</h3>
+      
+      <div class="stat-highlight">
+        <span class="stat-big">16 / 17</span>
+        <span class="stat-desc">students said <strong>Food / eating out</strong> is their biggest expense.</span>
+      </div>
+      <p class="stat-subtext">Only 1 person said Shopping.</p>
+
+      <!-- Bar Graph -->
+      <div class="data-chart">
+        <div class="chart-row">
+          <span class="chart-label">Food / Eating out</span>
+          <div class="chart-bar-bg">
+            <div class="chart-bar-fill" style="width: 94.1%;"></div>
+          </div>
+          <span class="chart-value">16</span>
+        </div>
+        <div class="chart-row">
+          <span class="chart-label">Shopping</span>
+          <div class="chart-bar-bg">
+            <div class="chart-bar-fill" style="width: 5.9%;"></div>
+          </div>
+          <span class="chart-value">1</span>
+        </div>
+      </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- Takeaway / Conclusion Section -->
+    <div class="takeaway-box">
+      <h4 class="takeaway-heading">WHAT DID WE LEARN?</h4>
+      <p class="takeaway-text">
+        Despite different overall personalities and spending types, students agree on one thing unanimously like a hive mind: <strong>the best thing to spend money on is Food.</strong>
+      </p>
+    </div>
+
+    <button class="nav-btn" onclick="location.reload()">RESTART QUIZ</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
