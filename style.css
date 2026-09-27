@@ -1,0 +1,372 @@
+/* =========================================
+   GLOBAL BASE STYLES
+========================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0b132b;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none !important;
+}
+
+hr.section-divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin: 32px 0;
+}
+
+/* =========================================
+   LANDING PAGE (INTRO)
+========================================= */
+
+#intro {
+  text-align: center;
+}
+
+#intro h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+.header-line {
+  width: 60px;
+  height: 2px;
+  background: #a5b4fc;
+  border: none;
+  margin: 0 auto 24px auto;
+}
+
+#intro p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.intro-p1 {
+  margin-bottom: 8px;
+}
+
+.intro-p2 {
+  margin-bottom: 36px;
+}
+
+.start-btn, .nav-btn {
+  background-color: #a5b4fc;
+  color: #0b132b;
+  border: none;
+  padding: 16px 36px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  margin-top: 16px;
+}
+
+.start-btn:hover, .nav-btn:hover {
+  background-color: #c7d2fe;
+  transform: translateY(-2px);
+}
+
+.disclaimer {
+  font-size: 0.85rem !important;
+  opacity: 0.5 !important;
+  margin-top: 24px;
+}
+
+/* =========================================
+   QUIZ PAGE
+========================================= */
+
+.sub-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #a5b4fc;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  margin-bottom: 32px;
+  overflow: hidden;
+}
+
+#progress-bar {
+  height: 100%;
+  width: 0%;
+  background: #a5b4fc;
+  transition: width 0.3s ease;
+}
+
+#question-text {
+  font-size: 2.75rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 40px;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 600px) {
+  .options-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.answer-button {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  padding: 24px 28px;
+  min-height: 80px;
+  border-radius: 6px;
+  text-align: left;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.answer-button:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #a5b4fc;
+}
+
+/* =========================================
+   RESULTS PAGE
+========================================= */
+
+.results-main-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 32px;
+}
+
+.section-label {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #a5b4fc;
+  margin-bottom: 12px;
+}
+
+.archetype-card {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 24px;
+  border-radius: 6px;
+  margin-bottom: 32px;
+}
+
+#result-archetype {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+#result-quote {
+  font-size: 1.1rem;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.match-big {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #a5b4fc;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+#match-description {
+  font-size: 1.1rem;
+  opacity: 0.85;
+}
+
+.section-heading {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+/* Comparison Table */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+.comparison-table th {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 16px 12px;
+  color: #a5b4fc;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.comparison-table td {
+  padding: 18px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 1rem;
+}
+
+.match-cell {
+  color: #a5b4fc;
+  font-weight: bold;
+}
+
+/* =========================================
+   DATA PAGE
+========================================= */
+
+.data-title {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+.data-intro {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 24px;
+}
+
+.question-number {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #a5b4fc;
+  margin-bottom: 4px;
+}
+
+.data-question {
+  font-size: 2rem;
+  line-height: 1.25;
+  margin-bottom: 20px;
+}
+
+.stat-highlight {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 6px;
+}
+
+.stat-big {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.stat-desc {
+  font-size: 1.1rem;
+}
+
+.stat-subtext {
+  font-size: 0.95rem;
+  opacity: 0.7;
+  margin-bottom: 24px;
+}
+
+/* Chart */
+.data-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.chart-row {
+  display: grid;
+  grid-template-columns: 140px 1fr 30px;
+  align-items: center;
+  gap: 16px;
+}
+
+.chart-label {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.chart-bar-bg {
+  height: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.chart-bar-fill {
+  height: 100%;
+  background: #a5b4fc;
+  border-radius: 6px;
+}
+
+.chart-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: right;
+}
+
+/* Takeaway Box */
+.takeaway-box {
+  margin-top: 24px;
+  padding: 24px;
+  background: rgba(165, 180, 252, 0.05);
+  border-left: 4px solid #a5b4fc;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 32px;
+}
+
+.takeaway-heading {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #a5b4fc;
+  margin-bottom: 8px;
+}
+
+.takeaway-text {
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
